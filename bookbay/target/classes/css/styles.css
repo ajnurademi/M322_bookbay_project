@@ -23,4 +23,21 @@
 
 .shadow{
     -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0), 10 , 0 , 0 ,10);
+    -fx-background-color: #425163;
+}
+
+.btn-addshelf{
+    -fx-background-color: #004fff;
+}
+
+.vtrkl-book{
+    -fx-background-color: white;
+    -fx-border-radius: 500;
+}
+
+.sign-in-btn{
+    -fx-background-color: #000000;
+}
+.sign-up-btn{
+    -fx-background-color: #EEEEEE;
 }
