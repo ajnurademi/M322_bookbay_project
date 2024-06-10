@@ -9,10 +9,8 @@ import javafx.scene.layout.HBox;
 
 public class PrimaryController implements Initializable{
 
-
     @FXML
     private HBox cardLayout;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
