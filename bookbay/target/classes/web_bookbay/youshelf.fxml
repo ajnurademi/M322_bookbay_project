@@ -235,7 +235,7 @@
                                                       <Image url="@../img/stars-bundle.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Remove" textFill="WHITE">
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Return" textFill="WHITE">
                                                    <font>
                                                       <Font name="Berlin Sans FB Bold" size="12.0" />
                                                    </font>
@@ -275,7 +275,7 @@
                                                       <Image url="@../img/stars-bundle.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Remove" textFill="WHITE">
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Return" textFill="WHITE">
                                                    <font>
                                                       <Font name="Berlin Sans FB Bold" size="12.0" />
                                                    </font>
@@ -315,7 +315,7 @@
                                                       <Image url="@../img/stars-bundle.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Remove" textFill="WHITE">
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Return" textFill="WHITE">
                                                    <font>
                                                       <Font name="Berlin Sans FB Bold" size="12.0" />
                                                    </font>
@@ -359,7 +359,7 @@
                                                       <Image url="@../img/stars-bundle.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Remove" textFill="WHITE">
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Return" textFill="WHITE">
                                                    <font>
                                                       <Font name="Berlin Sans FB Bold" size="12.0" />
                                                    </font>
@@ -399,7 +399,7 @@
                                                       <Image url="@../img/stars-bundle.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Remove" textFill="WHITE">
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Return" textFill="WHITE">
                                                    <font>
                                                       <Font name="Berlin Sans FB Bold" size="12.0" />
                                                    </font>
@@ -439,7 +439,7 @@
                                                       <Image url="@../img/stars-bundle.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Remove" textFill="WHITE">
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-radius: 5;" styleClass="btn-remove" stylesheets="@../css/styles.css" text="Return" textFill="WHITE">
                                                    <font>
                                                       <Font name="Berlin Sans FB Bold" size="12.0" />
                                                    </font>
