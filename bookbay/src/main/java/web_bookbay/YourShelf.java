@@ -1,24 +1,23 @@
 package web_bookbay;
 
-import javafx.event.ActionEvent;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class PrimaryController implements Initializable {
-
+public class YourShelf implements Initializable{
+    
     @FXML
     private ImageView btnlogout;
 
     @FXML
     private Label logout;
-
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         logout.setOnMouseClicked(this::handleReturnToLogin);
@@ -35,3 +34,5 @@ public class PrimaryController implements Initializable {
         }
     }
 }
+
+

@@ -19,7 +19,7 @@
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="52.0" prefWidth="205.0" text="Bookbay." textFill="#004fff">
+            <Label fx:id="logout" alignment="CENTER" prefHeight="52.0" prefWidth="205.0" text="Bookbay." textFill="#004fff">
                <font>
                   <Font name="Verdana Pro Bold" size="27.0" />
                </font>
@@ -36,16 +36,16 @@
                </children>
             </HBox>
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="188.0">
+            <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="188.0" spacing="20.0">
                <children>
-                  <Label prefHeight="56.0" prefWidth="112.0" text="Ajnur Ademi">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/user-solid.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="btnlogout" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logout-solid.png" />
                      </image>
                   </ImageView>
                </children>
