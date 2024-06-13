@@ -17,11 +17,15 @@ public class YourShelf implements Initializable{
 
     @FXML
     private Label logout;
+
+    @FXML
+    private Label shelfshelf;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         logout.setOnMouseClicked(this::handleReturnToLogin);
         btnlogout.setOnMouseClicked(this::handleReturnToLogin);
+        shelfshelf.setOnMouseClicked(this::gobackbrwoise);
     }
 
     // Methode, um zur Login-Seite zurückzukehren
@@ -29,6 +33,14 @@ public class YourShelf implements Initializable{
         try {
             // Setzen Sie die Wurzel der Szene auf die Login-Seite
             App.setRoot("login");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void gobackbrwoise(MouseEvent event) {
+        try {
+            // Setzen Sie die Wurzel der Szene auf die Login-Seite
+            App.setRoot("primary");
         } catch (IOException e) {
             e.printStackTrace();
         }

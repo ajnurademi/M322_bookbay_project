@@ -37,6 +37,16 @@
     -fx-background-color: #000000;
 }
 
+#signInButton:hover{
+    -fx-background-color: #4b525b;
+}
+
+#signUpButton:hover{
+    -fx-background-color: #888888;
+}
+
+
+
 .sign-up-btn{
     -fx-background-color: #EEEEEE;
 }

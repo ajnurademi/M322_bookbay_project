@@ -51,6 +51,7 @@ public class LoginController implements Initializable {
 
         if (validateLogin(email, password)) {
             messageLabel.setText("Login successful!");
+            messageLabel.setStyle("-fx-text-fill: green;");
 
             // Wechsel zur Haupt-FXML-Datei
             try {
@@ -63,6 +64,7 @@ public class LoginController implements Initializable {
             }
         } else {
             messageLabel.setText("Invalid email or password.");
+            messageLabel.setStyle("-fx-text-fill: red;");
         }
     }
 
@@ -73,8 +75,10 @@ public class LoginController implements Initializable {
 
         if (addUser(email, password)) {
             messageLabel.setText("Sign up successful! You can now sign in.");
+            messageLabel.setStyle("-fx-text-fill: orange;");
         } else {
             messageLabel.setText("Sign up failed. Email may already be in use.");
+            messageLabel.setStyle("-fx-text-fill: green;");
         }
     }
 

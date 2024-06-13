@@ -156,7 +156,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                  <HBox fx:id="yourshelf" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -173,7 +173,11 @@
                </children>
             </VBox>
             <Separator prefWidth="200.0" />
-            <Pane prefHeight="200.0" prefWidth="200.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="-18.0" layoutY="-36.0" prefHeight="100.0" prefWidth="200.0" />
+                  <HBox layoutX="-26.0" layoutY="25.0" prefHeight="100.0" prefWidth="200.0" />
+               </children></Pane>
             <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="250.0">
                <children>
                   <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
