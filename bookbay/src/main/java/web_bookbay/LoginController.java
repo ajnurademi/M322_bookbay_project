@@ -68,7 +68,6 @@ public class LoginController implements Initializable {
         }
     }
 
-
     private void handleSignUp() {
         String email = emailField.getText();
         String password = passwordField.getText();

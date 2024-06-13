@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 public class YourShelf implements Initializable{
     
@@ -19,32 +21,48 @@ public class YourShelf implements Initializable{
     private Label logout;
 
     @FXML
-    private Label shelfshelf;
-    
+    private HBox browse;
+
+    @FXML
+    private HBox darkmode_hbox;
+
+    @FXML
+    private VBox darkmode_vbox;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         logout.setOnMouseClicked(this::handleReturnToLogin);
-        btnlogout.setOnMouseClicked(this::handleReturnToLogin);
-        shelfshelf.setOnMouseClicked(this::gobackbrwoise);
+        browse.setOnMouseClicked(this::handleToMain);
     }
 
-    // Methode, um zur Login-Seite zurückzukehren
     private void handleReturnToLogin(MouseEvent event) {
         try {
-            // Setzen Sie die Wurzel der Szene auf die Login-Seite
             App.setRoot("login");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void gobackbrwoise(MouseEvent event) {
+    private void handleToMain(MouseEvent event) {
         try {
-            // Setzen Sie die Wurzel der Szene auf die Login-Seite
             App.setRoot("primary");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    private boolean isDarkMode = false; 
+
+    @FXML
+    private void handleDarkModeClick(MouseEvent event) {
+        if (isDarkMode) {
+            darkmode_hbox.setStyle("-fx-background-color: #ffffff;");
+            darkmode_vbox.setStyle("-fx-background-color: #ffffff;");
+        } else {
+            darkmode_hbox.setStyle("-fx-background-color: #999898;");
+            darkmode_vbox.setStyle("-fx-background-color: #999898;");
+        }
+        isDarkMode = !isDarkMode; 
+    }    
 }
 
 
