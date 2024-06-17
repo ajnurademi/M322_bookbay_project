@@ -18,7 +18,7 @@ Im Rahmen dieses Projekts wurden folgende Aufgaben und Funktionen umgesetzt:
 
 Während der Entwicklung traten einige Probleme auf, insbesondere:
 
-* **Hinzufügen von Büchern zur "Your Shelf":** Es war nicht möglich, Bücher erfolgreich zur "Your Shelf" hinzuzufügen. Der Versuch, für jede Buchselektion eine separate FXML-Datei zu erstellen, führte zu vielen Fehlern. Aufgrund der Komplexität und der begrenzten Zeit habe ich dieses Feature vorerst zurückgestellt, da ich mich auch auf die Implementierung von Darkmode und die Login-Authentifizierung konzentrieren musste.
+* **Hinzufügen von Büchern zur "Your Shelf":** Es war nicht möglich, Bücher erfolgreich zur "Your Shelf" hinzuzufügen. Der Versuch, für jede Buchselektion eine separate FXML-Datei zu erstellen, führte zu vielen Fehlern. Aufgrund der Komplexität und der begrenzten Zeit habe ich dieses Feature vorerst zurückgestellt, da ich mich auch auf die Implementierung von Darkmode und die Login-Authentifizierung konzentrieren musste, was dazu geführt hat das ich schone bereits 2 Zusatzaufgaben gelöst habe!
 
 ## 👨‍💻 Beitragende
 - [Ajnur Ademi](https://github.com/ajnurademi)
