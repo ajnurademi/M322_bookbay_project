@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,7 +55,6 @@ public class LoginController implements Initializable {
             messageLabel.setText("Login successful!");
             messageLabel.setStyle("-fx-text-fill: green;");
 
-            // Wechsel zur Haupt-FXML-Datei
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
                 Parent root = loader.load();
@@ -63,7 +64,7 @@ public class LoginController implements Initializable {
                 e.printStackTrace();
             }
         } else {
-            messageLabel.setText("Invalid email or password.");
+            messageLabel.setText("Invalid email or password. (sign up first)");
             messageLabel.setStyle("-fx-text-fill: red;");
         }
     }
@@ -72,12 +73,24 @@ public class LoginController implements Initializable {
         String email = emailField.getText();
         String password = passwordField.getText();
 
+        if (!isValidEmail(email)) {
+            messageLabel.setText("Invalid email format. (maybe (@))");
+            messageLabel.setStyle("-fx-text-fill: #FEB95F;");
+            return;
+        }
+
+        if (!isValidPassword(password)) {
+            messageLabel.setText("Password must be at least 8 characters long, contain at least 1 uppercase letter and 1 number.");
+            messageLabel.setStyle("-fx-text-fill: #FEB95F;");
+            return;
+        }
+
         if (addUser(email, password)) {
             messageLabel.setText("Sign up successful! You can now sign in.");
-            messageLabel.setStyle("-fx-text-fill: orange;");
+            messageLabel.setStyle("-fx-text-fill: green;");
         } else {
             messageLabel.setText("Sign up failed. Email may already be in use.");
-            messageLabel.setStyle("-fx-text-fill: green;");
+            messageLabel.setStyle("-fx-text-fill: red;");
         }
     }
 
@@ -121,5 +134,19 @@ public class LoginController implements Initializable {
             e.printStackTrace();
         }
         return false;
+    }
+
+    private boolean isValidEmail(String email) {
+        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+
+    private boolean isValidPassword(String password) {
+        String passwordRegex = "^(?=.*[A-Z])(?=.*\\d).{8,}$";
+        Pattern pattern = Pattern.compile(passwordRegex);
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
     }
 }
