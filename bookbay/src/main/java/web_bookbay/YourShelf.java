@@ -33,6 +33,7 @@ public class YourShelf implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         logout.setOnMouseClicked(this::handleReturnToLogin);
         browse.setOnMouseClicked(this::handleToMain);
+        btnlogout.setOnMouseClicked(this::handleReturnToLogin);
     }
 
     private void handleReturnToLogin(MouseEvent event) {
