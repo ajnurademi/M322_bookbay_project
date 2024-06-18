@@ -24,7 +24,7 @@
                         <Font name="Verdana Pro Bold" size="36.0" />
                      </font>
                   </Label>
-                  <Label text="Sign in or Create an account ">
+                  <Label text="Sign up to Create an account ">
                      <font>
                         <Font name="Berlin Sans FB" size="21.0" />
                      </font>
@@ -60,7 +60,7 @@
                         <Separator prefHeight="10.0" prefWidth="76.0" />
                      </children>
                   </HBox>
-                  <Button fx:id="signUpButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" styleClass="sign-up-btn" stylesheets="@../css/styles.css" text="Sign up with email">
+                  <Button fx:id="signUpButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" styleClass="sign-up-btn" stylesheets="@../css/styles.css" text="Sign in with email">
                      <font>
                         <Font name="Berlin Sans FB" size="14.0" />
                      </font>

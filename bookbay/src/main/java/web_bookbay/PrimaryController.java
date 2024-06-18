@@ -34,6 +34,8 @@ public class PrimaryController implements Initializable {
         logout.setOnMouseClicked(this::handleReturnToLogin);
         btnlogout.setOnMouseClicked(this::handleReturnToLogin);
         yourshelf.setOnMouseClicked(this::handleToYourShelf);
+
+        applyDarkMode(AppSettings.getInstance().isDarkMode());
     }
 
     private void handleReturnToLogin(MouseEvent event) {
@@ -43,6 +45,7 @@ public class PrimaryController implements Initializable {
             e.printStackTrace();
         }
     }
+
     private void handleToYourShelf(MouseEvent event) {
         try {
             App.setRoot("yourshelf");
@@ -51,17 +54,20 @@ public class PrimaryController implements Initializable {
         }
     }
 
-    private boolean isDarkMode = false; 
-
     @FXML
     private void handleDarkModeClick(MouseEvent event) {
+        boolean isDarkMode = !AppSettings.getInstance().isDarkMode();
+        AppSettings.getInstance().setDarkMode(isDarkMode);
+        applyDarkMode(isDarkMode);
+    }
+
+    private void applyDarkMode(boolean isDarkMode) {
         if (isDarkMode) {
-            darkmode_hbox.setStyle("-fx-background-color: #ffffff;");
-            darkmode_vbox.setStyle("-fx-background-color: #ffffff;");
-        } else {
             darkmode_hbox.setStyle("-fx-background-color: #999898;");
             darkmode_vbox.setStyle("-fx-background-color: #999898;");
+        } else {
+            darkmode_hbox.setStyle("-fx-background-color: #ffffff;");
+            darkmode_vbox.setStyle("-fx-background-color: #ffffff;");
         }
-        isDarkMode = !isDarkMode; 
-    }    
+    }
 }

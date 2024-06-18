@@ -1,9 +1,5 @@
 package web_bookbay;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -12,7 +8,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class YourShelf implements Initializable{
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class YourShelf implements Initializable {
     
     @FXML
     private ImageView btnlogout;
@@ -34,6 +34,8 @@ public class YourShelf implements Initializable{
         logout.setOnMouseClicked(this::handleReturnToLogin);
         browse.setOnMouseClicked(this::handleToMain);
         btnlogout.setOnMouseClicked(this::handleReturnToLogin);
+
+        applyDarkMode(AppSettings.getInstance().isDarkMode());
     }
 
     private void handleReturnToLogin(MouseEvent event) {
@@ -43,6 +45,7 @@ public class YourShelf implements Initializable{
             e.printStackTrace();
         }
     }
+
     private void handleToMain(MouseEvent event) {
         try {
             App.setRoot("primary");
@@ -51,19 +54,20 @@ public class YourShelf implements Initializable{
         }
     }
 
-    private boolean isDarkMode = false; 
-
     @FXML
     private void handleDarkModeClick(MouseEvent event) {
+        boolean isDarkMode = !AppSettings.getInstance().isDarkMode();
+        AppSettings.getInstance().setDarkMode(isDarkMode);
+        applyDarkMode(isDarkMode);
+    }
+
+    private void applyDarkMode(boolean isDarkMode) {
         if (isDarkMode) {
-            darkmode_hbox.setStyle("-fx-background-color: #ffffff;");
-            darkmode_vbox.setStyle("-fx-background-color: #ffffff;");
-        } else {
             darkmode_hbox.setStyle("-fx-background-color: #999898;");
             darkmode_vbox.setStyle("-fx-background-color: #999898;");
+        } else {
+            darkmode_hbox.setStyle("-fx-background-color: #ffffff;");
+            darkmode_vbox.setStyle("-fx-background-color: #ffffff;");
         }
-        isDarkMode = !isDarkMode; 
-    }    
+    }
 }
-
-
